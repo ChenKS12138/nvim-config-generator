@@ -7,6 +7,20 @@ local highlights = require "custom.highlights"
 M.ui = {
   nvdash = {
     load_on_startup = true,
+    header = {
+      " /\\     /\\            ",
+      "{  `---'  }           ",
+      "{  O   O  }           ",
+      "~~>  V  <~~           ",
+      " \\  \\|/  /            ",
+      "  `-----'__           ",
+      "  /     \\  `^\\_       ",
+      " {       }\\ |\\_\\_   W ",
+      " |  \\_/  |/ /  \\_\\_( )",
+      "  \\__/  /(_E     \\__/ ",
+      "    (  /              ",
+      "     MM               "
+    },
   },
   theme = "dark_horizon",
   theme_toggle = { "dark_horizon", "one_light" },
