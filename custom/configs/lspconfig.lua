@@ -1,10 +1,15 @@
-local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd" }
+local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer" }
+
+local on_attach = function(client, bufnr)
+  vim.lsp.inlay_hint.enable(bufnr)
+  require("plugins.configs.lspconfig").on_attach(client, bufnr)
+end
+
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

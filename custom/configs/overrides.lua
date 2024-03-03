@@ -23,6 +23,7 @@ M.treesitter = {
 }
 
 M.mason = {
+  automatic_installation = true;
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
@@ -43,7 +44,7 @@ M.mason = {
     "shfmt",
 
     -- rust
-    "rust",
+    "rust-analyzer",
     "rustfmt",
   },
 }
