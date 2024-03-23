@@ -11,8 +11,8 @@ M.general = {
         require("conform").format()
       end,
       "formatting",
-    }
-
+    },
+    ["<leader>fg"] = { "<cmd> Telescope lsp_document_symbols<CR>", "Find symbols" },
   },
   v = {
     [">"] = { ">gv", "indent"},

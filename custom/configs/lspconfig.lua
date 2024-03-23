@@ -3,7 +3,8 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer" }
+-- https://github.com/williamboman/mason-lspconfig.nvim
+local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "pylsp" }
 
 local on_attach = function(client, bufnr)
   vim.lsp.inlay_hint.enable(bufnr)

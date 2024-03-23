@@ -46,6 +46,9 @@ M.mason = {
     -- rust
     "rust-analyzer",
     "rustfmt",
+
+    -- python
+    "python-lsp-server",
   },
 }
 
@@ -64,5 +67,11 @@ M.nvimtree = {
     },
   },
 }
+
+-- M.telescope = {
+--   n = {
+--     ["<leader>fg"] = { "<cmd> Telescope lsp_document_symbols<CR>", "Find symbols" },
+--   }
+-- }
 
 return M
