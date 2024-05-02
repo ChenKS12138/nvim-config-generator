@@ -22,8 +22,8 @@ M.ui = {
       "     MM               "
     },
   },
-  theme = "dark_horizon",
-  theme_toggle = { "dark_horizon", "one_light" },
+  theme = "ayu_dark",
+  theme_toggle = { "ayu_dark", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
