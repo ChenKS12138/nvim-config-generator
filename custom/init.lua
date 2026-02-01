@@ -36,3 +36,16 @@ if vim.fn.has("wsl") == 1 then
   }
 end
 
+local autoswitch = require("custom.autoswitch")
+
+-- Check on startup
+autoswitch.switch_theme()
+
+-- Check on focus gained
+vim.api.nvim_create_autocmd("FocusGained", {
+  pattern = "*",
+  callback = function()
+    autoswitch.switch_theme()
+  end,
+})
+
