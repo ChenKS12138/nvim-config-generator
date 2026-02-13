@@ -1,4 +1,9 @@
-# local autocmd = vim.api.nvim_create_autocmd
+# -- Suppress deprecated warning in plugins
+if vim.islist then
+  vim.tbl_islist = vim.islist
+end
+
+local autocmd = vim.api.nvim_create_autocmd
 
 -- Auto resize panes when resizing nvim window
 -- autocmd("VimResized", {

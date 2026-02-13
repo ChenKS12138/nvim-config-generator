@@ -7,7 +7,7 @@ local lspconfig = require "lspconfig"
 local servers = { "html", "cssls", "tsserver", "clangd", "rust_analyzer", "pylsp", "gopls" }
 
 local on_attach = function(client, bufnr)
-  vim.lsp.inlay_hint.enable(bufnr)
+  vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
   require("plugins.configs.lspconfig").on_attach(client, bufnr)
 end
 
