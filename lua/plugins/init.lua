@@ -30,6 +30,8 @@ return {
         "rust-analyzer",
         "rustfmt",
         "python-lsp-server",
+        "ripgrep",
+        "fd",
       },
     },
   },

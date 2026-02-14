@@ -41,6 +41,18 @@ vim.api.nvim_create_autocmd({ "VimEnter", "FocusGained" }, {
   callback = sync_theme,
 })
 
+-- Change directory to the one passed as an argument
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argc() > 0 then
+      local arg = vim.fn.argv(0)
+      if vim.fn.isdirectory(arg) == 1 then
+        vim.api.nvim_set_current_dir(arg)
+      end
+    end
+  end,
+})
+
 vim.api.nvim_create_user_command("Format", function(args)
   local range = nil
   if args.count ~= -1 then
