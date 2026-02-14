@@ -5,20 +5,30 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.base46 = {
-	theme = "onedark",
+local autotheme = require "configs.autotheme"
+local theme = autotheme.get_theme()
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+M.base46 = {
+  theme = theme,
+  theme_toggle = { "ayu_dark", "one_light" },
 }
 
--- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
+M.nvdash = {
+  load_on_startup = true,
+  header = {
+    " /\\     /\\            ",
+    "{  `---'  }           ",
+    "{  O   O  }           ",
+    "~~>  V  <~~           ",
+    " \\  \\|/  /            ",
+    "  `-----'__           ",
+    "  /     \\  `^\\_       ",
+    " {       }\\ |\\_\\_   W ",
+    " |  \\_/  |/ /  \\_\\_( )",
+    "  \\__/  /(_E     \\__/ ",
+    "    (  /              ",
+    "     MM               ",
+  },
+}
 
 return M
