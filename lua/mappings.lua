@@ -13,7 +13,18 @@ end, { desc = "General Format file" })
 
 map("n", "<leader>fg", "<cmd> Telescope lsp_document_symbols<CR>", { desc = "Telescope Find symbols" })
 
+map("n", "<leader>uw", function()
+  vim.opt.wrap = not vim.opt.wrap:get()
+  print("Word Wrap: " .. (vim.opt.wrap:get() and "ON" or "OFF"))
+end, { desc = "Toggle Word Wrap" })
+
 map("v", ">", ">gv", { desc = "Indent line" })
+
+-- Diffview
+map("n", "<leader>gd", "<cmd>DiffviewOpen<CR>", { desc = "Git Diffview Open" })
+map("n", "<leader>gD", "<cmd>DiffviewClose<CR>", { desc = "Git Diffview Close" })
+map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", { desc = "Git File History" })
+map("n", "<leader>gH", "<cmd>DiffviewFileHistory<CR>", { desc = "Git Project History" })
 
 -- terminal
 local function toggle_term(opts, target_size)

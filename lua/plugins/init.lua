@@ -105,6 +105,11 @@ return {
     },
   },
 
+  {
+    "sindrets/diffview.nvim",
+    event = "VeryLazy",
+  },
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

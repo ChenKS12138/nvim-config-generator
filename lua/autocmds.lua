@@ -64,3 +64,21 @@ vim.api.nvim_create_user_command("Format", function(args)
   end
   require("conform").format { async = true, lsp_fallback = true, range = range }
 end, { range = true })
+
+-- Filetype specific wrap settings
+local autocmd = vim.api.nvim_create_autocmd
+
+autocmd("FileType", {
+  pattern = { "markdown", "text", "gitcommit" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+  end,
+})
+
+autocmd("FileType", {
+  pattern = { "rust", "c", "cpp", "lua", "typescript", "go", "python" },
+  callback = function()
+    vim.opt_local.wrap = false
+  end,
+})
