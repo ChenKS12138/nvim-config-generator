@@ -1,4 +1,8 @@
-# -- Suppress deprecated warning in plugins
+package.preload["nvim-treesitter.configs"] = function()
+  return require "nvim-treesitter.config"
+end
+
+-- -- Suppress deprecated warning in plugins
 if vim.islist then
   vim.tbl_islist = vim.islist
 end
@@ -53,4 +57,3 @@ vim.api.nvim_create_autocmd("FocusGained", {
     autoswitch.switch_theme()
   end,
 })
-

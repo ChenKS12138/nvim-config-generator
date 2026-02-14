@@ -29,3 +29,7 @@ mv $tmp_nvchad_dir $nvim_config_dir
 
 # 5. Symbol link custom config
 ln -s "$script_dir/custom" "$nvim_config_dir/lua/custom"
+
+
+# 6. Symbol link gemini.md
+ln -s "$script_dir/GEMINI.md" "$nvim_config_dir/GEMINI.md"
