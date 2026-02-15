@@ -1,7 +1,7 @@
 require "nvchad.options"
 
 -- add yours here!
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 
 -- Neovide config
 if vim.g.neovide then
